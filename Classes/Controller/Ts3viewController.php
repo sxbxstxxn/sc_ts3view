@@ -38,8 +38,7 @@ class Ts3viewController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      */
     public function showAction()
     {
-
-        $servername = $this->settings['servername'];;
+        $servername = $this->settings['servername'];
         $this->view->assign('servername', $servername);
     }    
 }
