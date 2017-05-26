@@ -1,15 +1,12 @@
 
 plugin.tx_ts3view_pi1 {
 	view {
-		templateRootPaths.0 = {$plugin.tx_ts3view_pi1.view.templateRootPath}
+	  templateRootPaths.0 = {$plugin.tx_ts3view_pi1.view.templateRootPath}
 		partialRootPaths.0 = {$plugin.tx_ts3view_pi1.view.partialRootPath}
-		layoutRootPaths.0 = {$plugin.tx_ts3view_pi1.view.layoutRootPath}
+		layoutRootPaths.0 = {$plugin.tx_ts3view_pi1.view.layoutRootPath}		
 	}
-	#persistence {
-	#	storagePid = {$plugin.tx_ts3view_pi1.persistence.storagePid}
-	#}
 }
 
-plugin.tx_wowstats._CSS_DEFAULT_STYLE (
+plugin.tx_ts3view._CSS_DEFAULT_STYLE (
 	
 )

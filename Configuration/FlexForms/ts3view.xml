@@ -1,0 +1,52 @@
+<T3DataStructure>
+    <sheets>
+        <sDef>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>WOW Stats</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+   
+                    <switchableControllerActions>
+                        <TCEforms>
+                            <label>Ansicht</label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <selectedListStyle>width:400px</selectedListStyle>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">SHOW</numIndex>
+                                        <numIndex index="1">Ts3view->show</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">SHOW small</numIndex>
+                                        <numIndex index="1">Ts3view->show</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </switchableControllerActions>
+
+                    <settings.servername>
+                        <TCEforms>
+                            <label>Servername</label>
+                            <displayCond>
+                              <OR>                                
+                                <numIndex index="0">FIELD:switchableControllerActions:=:Ts3view->show</numIndex>
+                                <numIndex index="1">FIELD:switchableControllerActions:=:Ts3view->show</numIndex>
+                              </OR>    
+                            </displayCond>
+                            <config>
+                                <type>text</type>
+                                <rows>1</rows>
+                                <eval>required,trim</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.servername>
+                </el>
+            </ROOT>
+        </sDef>
+    </sheets>
+</T3DataStructure>
