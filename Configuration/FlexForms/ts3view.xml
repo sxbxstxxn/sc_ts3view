@@ -7,44 +7,66 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
-   
-                    <switchableControllerActions>
-                        <TCEforms>
-                            <label>Ansicht</label>
-                            <onChange>reload</onChange>
-                            <config>
-                                <type>select</type>
-                                <selectedListStyle>width:400px</selectedListStyle>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">SHOW</numIndex>
-                                        <numIndex index="1">Ts3view->show</numIndex>
-                                    </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">SHOW small</numIndex>
-                                        <numIndex index="1">Ts3view->show</numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
-                    </switchableControllerActions>
-
-                    <settings.servername>
-                        <TCEforms>
-                            <label>Servername</label>
-                            <displayCond>
-                              <OR>                                
-                                <numIndex index="0">FIELD:switchableControllerActions:=:Ts3view->show</numIndex>
-                                <numIndex index="1">FIELD:switchableControllerActions:=:Ts3view->show</numIndex>
-                              </OR>    
-                            </displayCond>
-                            <config>
-                                <type>text</type>
-                                <rows>1</rows>
-                                <eval>required,trim</eval>
-                            </config>
-                        </TCEforms>
-                    </settings.servername>
+                  <settings.server.ip>
+                    <TCEforms>
+                      <label>TS IP</label>
+                      <config>
+                        <type>text</type>
+                        <rows>1</rows>
+                        <eval>required,trim</eval>
+                      </config>
+                    </TCEforms>
+                  </settings.server.ip>
+                  <settings.server.port>
+                    <TCEforms>
+                      <label>TS Port</label>
+                      <config>
+                        <type>text</type>
+                        <rows>1</rows>
+                        <eval>required,int</eval>                        
+                      </config>
+                    </TCEforms>
+                  </settings.server.port>    
+                  <settings.server.queryadmin>
+                    <TCEforms>
+                      <label>TS Query Admin</label>
+                      <config>
+                        <type>text</type>
+                        <rows>1</rows>
+                        <eval>required,trim</eval>                        
+                      </config>
+                    </TCEforms>
+                  </settings.server.queryadmin> 
+                  <settings.server.querypw>
+                    <TCEforms>
+                      <label>TS Query Password</label>
+                      <config>
+                        <type>text</type>
+                        <rows>1</rows>
+                        <eval>required,trim</eval>                        
+                      </config>
+                    </TCEforms>
+                  </settings.server.querypw>   
+                  <settings.server.queryport>
+                    <TCEforms>
+                      <label>TS Query Port</label>
+                      <config>
+                        <type>text</type>
+                        <rows>1</rows>
+                        <eval>required,int</eval>                        
+                      </config>
+                    </TCEforms>
+                  </settings.server.queryport>   
+                  <settings.server.queryusernick>
+                    <TCEforms>
+                      <label>TS Query Usernick</label>
+                      <config>
+                        <type>text</type>
+                        <rows>1</rows>
+                        <eval>trim</eval>                        
+                      </config>
+                    </TCEforms>
+                  </settings.server.queryusernick>                    
                 </el>
             </ROOT>
         </sDef>
