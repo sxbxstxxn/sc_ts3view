@@ -1,7 +1,7 @@
 <?php
 namespace Sc\Ts3view\Controller;
 //require_once(PATH_site . 'typo3conf/ext/ts3view/Libraries/TeamSpeak3/TeamSpeak3.php');//OK
-use \TeamSpeak3;
+//use \TeamSpeak3;
 
 /***************************************************************
  *
@@ -45,9 +45,13 @@ class Ts3viewController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         //include_once(PATH_site . 'typo3conf/ext/ts3view/Libraries/TeamSpeak3/TeamSpeak3.php');//OK
         $server = $this->settings['server'];
       
-        $ts3_VirtualServer = TeamSpeak3::factory("serverquery://".$server["ts_query_admin"].":".$server["ts_query_password"]."@".$server["tsip"].":".$server["ts_query_port"]."/?server_port=".$server["tsport"]."&nickname=".$server["ts_query_user_nick"]."");
+        try {
+          $ts3_VirtualServer = TeamSpeak3::factory("serverquery://".$server["ts_query_admin"].":".$server["ts_query_password"]."@".$server["tsip"].":".$server["ts_query_port"]."/?server_port=".$server["tsport"]."&nickname=".$server["ts_query_user_nick"]."");
         //$resulthtml = $ts3_VirtualServer->getViewer(new TeamSpeak3_Viewer_Html("images/viewericons/", "images/countryflags/", "data:image"));
-      
+        }
+      catch (Exception $e) {
+        echo $e;die;
+      }
         var_dump($server);die;
         $this->view->assign('resulthtml', $resulthtml);
     }    
