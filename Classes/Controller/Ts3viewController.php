@@ -1,7 +1,7 @@
 <?php
 namespace Sc\Ts3view\Controller;
-//require_once(PATH_site . 'typo3conf/ext/ts3view/Libraries/TeamSpeak3/TeamSpeak3.php');//OK
-//use \TeamSpeak3;
+require_once(PATH_site . 'typo3conf/ext/ts3view/Libraries/TeamSpeak3/TeamSpeak3.php');//OK
+use \TeamSpeak3;
 
 /***************************************************************
  *
